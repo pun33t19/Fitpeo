@@ -29,4 +29,6 @@
     <string name="pass">Pass</string>
     <string name="office">Office</string>
     <string name="people">People</string>
+    <string name="permissions">Permissions</string>
+    <string name="desk_booking">Desk booking</string>
 </resources>

@@ -18,4 +18,12 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_bg</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/gray_500</item>
+        <item name="colorAccent">@color/secondary_gray_700</item>
+        <item name="android:statusBarColor">@color/gray_500</item>
+    </style>
 </resources>

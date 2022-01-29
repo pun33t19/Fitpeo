@@ -34,8 +34,8 @@ class PassDetailsFragment : Fragment(), MultiSpinner.MultiSpinnerListener {
     private lateinit var textSelected: TextView
     private val REQUEST_CODE = 100
     private lateinit var locationText: TextView
-    private var latitude:Double=0.0
-    private var longitude:Double=0.0
+    private var latitude: Double = 0.0
+    private var longitude: Double = 0.0
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
@@ -52,8 +52,9 @@ class PassDetailsFragment : Fragment(), MultiSpinner.MultiSpinnerListener {
     ): View? {
         // Inflate the layout for this fragment
 
-        val bottomNav=activity?.findViewById<BottomNavigationView>(com.example.fitpeodemoapp.R.id.bottom_navigation)
-        bottomNav?.visibility=View.GONE
+        val bottomNav =
+            activity?.findViewById<BottomNavigationView>(com.example.fitpeodemoapp.R.id.bottom_navigation)
+        bottomNav?.visibility = View.GONE
 
         return inflater.inflate(
             com.example.fitpeodemoapp.R.layout.fragment_pass_details,
@@ -102,11 +103,11 @@ class PassDetailsFragment : Fragment(), MultiSpinner.MultiSpinnerListener {
             }
         }
 
-        val mapText=view.findViewById<TextView>(com.example.fitpeodemoapp.R.id.view_on_map_text)
+        val mapText = view.findViewById<TextView>(com.example.fitpeodemoapp.R.id.view_on_map_text)
 
         mapText.setOnClickListener {
-            val uri= Uri.parse("geo:"+latitude.toString()+","+longitude.toString())
-            val mapIntent=Intent(Intent.ACTION_VIEW,uri)
+            val uri = Uri.parse("geo:" + latitude.toString() + "," + longitude.toString())
+            val mapIntent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(mapIntent)
         }
 
@@ -115,8 +116,8 @@ class PassDetailsFragment : Fragment(), MultiSpinner.MultiSpinnerListener {
 
     private fun getLocation() {
         fusedLocationClient.lastLocation.addOnSuccessListener {
-             latitude = it.latitude
-             longitude = it.longitude
+            latitude = it.latitude
+            longitude = it.longitude
 
             Log.e("lat", latitude.toString() + " " + longitude.toString())
 
@@ -146,17 +147,17 @@ class PassDetailsFragment : Fragment(), MultiSpinner.MultiSpinnerListener {
     }
 
     override fun onItemsSelected(selected: BooleanArray?) {
-            var str:String=""
+        var str: String = ""
         for (i in 0..selected?.size!! - 1) {
             if (selected[i].equals(true)) {
                 Log.i("Check", i.toString())
 //                textSelected.append(items[i] + ",")
-                 str+=items[i]+","
+                str += items[i] + ","
             }
         }
 
-        str=str.substring(0,str.lastIndexOf(","))
-        textSelected.text=str
+        str = str.substring(0, str.lastIndexOf(","))
+        textSelected.text = str
     }
 
 
