@@ -13,4 +13,20 @@
     <string name="get_a_desk_for_next_week">Get a desk for next week</string>
     <string name="add_a_space">Add a space</string>
     <string name="_6_attendees_wll_be_in">6 attendees wll be in</string>
+    <string name="pass_details">Pass details</string>
+    <string name="notes">Notes</string>
+    <string name="offices">Offices</string>
+    <string name="location">Location</string>
+    <string name="boston_hq">Boston HQ</string>
+    <string name="sales_and_marketing">Sales and marketing</string>
+    <string name="work_area">Work area</string>
+    <string name="desk">Desk</string>
+    <string name="view_on_map">View On map</string>
+    <string name="schedule">Schedule</string>
+    <string name="you_are_the_first_people_back_in_the_office_n_mind_the_signs_put_up_and_complete_your_n_checkpoint_daily"> You are the first people back in the office!\n Mind the signs put up and complete your\n checkpoint daily.</string>
+    <string name="peoplefragment">PeopleFragment</string>
+    <string name="officefragment">OfficeFragment</string>
+    <string name="pass">Pass</string>
+    <string name="office">Office</string>
+    <string name="people">People</string>
 </resources>

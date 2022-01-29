@@ -7,13 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitpeodemoapp.adapters.AvatarsAdapter
 import com.example.fitpeodemoapp.adapters.AvatarsFutureAdapter
 import com.example.fitpeodemoapp.databinding.FragmentHomeBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class HomeFragment : Fragment() {
+
+    private lateinit var _binding:FragmentHomeBinding
+    val binding:FragmentHomeBinding get() = _binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +30,18 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        val bottomNav=activity?.findViewById<BottomNavigationView>(com.example.fitpeodemoapp.R.id.bottom_navigation)
+        bottomNav?.visibility=View.VISIBLE
+
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         binding.recyclerViewAvatars.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
@@ -53,7 +69,10 @@ class HomeFragment : Fragment() {
         binding.recyclerViewAvatars.adapter = AvatarsAdapter(imagesList)
         binding.attendees2RecyclerView.adapter=AvatarsFutureAdapter(avatarsList)
 
-        return binding.root
+        binding.infoButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_passDetailsFragment)
+        }
+
     }
 
 

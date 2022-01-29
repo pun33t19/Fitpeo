@@ -19,4 +19,14 @@
         android:name="com.example.fitpeodemoapp.PassDetailsFragment"
         android:label="fragment_pass_details"
         tools:layout="@layout/fragment_pass_details" />
+    <fragment
+        android:id="@+id/officeFragment"
+        android:name="com.example.fitpeodemoapp.OfficeFragment"
+        android:label="fragment_office"
+        tools:layout="@layout/fragment_office" />
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.fitpeodemoapp.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" />
 </navigation>

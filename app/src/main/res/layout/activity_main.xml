@@ -6,16 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bottom_nav_bg"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="5dp"
+        app:itemIconSize="35dp"
+        app:itemIconTint="@drawable/button_bottom_nav_color"
+        app:itemPaddingTop="20dp"
+        app:itemTextColor="@drawable/button_bottom_nav_color"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
