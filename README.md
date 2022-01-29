@@ -9,10 +9,11 @@ A demo app as a proposed solution to the technical round of Fitpeo internship
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/pun33t19/FitpeoDemoApp/master/ScreenShots/WhatsApp%20Image%202022-01-29%20at%209.36.04%20PM%20(1).jpeg)
+<img src="https://raw.githubusercontent.com/pun33t19/FitpeoDemoApp/master/ScreenShots/WhatsApp%20Image%202022-01-29%20at%209.36.04%20PM%20(1).jpeg" width="300" height="600" />
+
+<img src="https://raw.githubusercontent.com/pun33t19/FitpeoDemoApp/master/ScreenShots/WhatsApp%20Image%202022-01-29%20at%209.36.04%20PM.jpeg" width="300" height="600" />
 
 
-![App Screenshot](https://raw.githubusercontent.com/pun33t19/FitpeoDemoApp/master/ScreenShots/WhatsApp%20Image%202022-01-29%20at%209.36.04%20PM.jpeg)
 
 
 ## Features
